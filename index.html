@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroCafé Consultores - Innovación y Gestión Sostenible</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Raleway', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f7f4',
+                            100: '#d9ede5',
+                            200: '#b6d9cc',
+                            300: '#86beb0',
+                            400: '#5a9e91',
+                            500: '#3f8377',
+                            600: '#2f6a61',
+                            700: '#27554f',
+                            800: '#224541',
+                            900: '#1f3a37',
+                            950: '#0d2220',
+                        },
+                        secondary: {
+                            50: '#faf5eb',
+                            100: '#f3e8cc',
+                            200: '#e8d19b',
+                            300: '#dab264',
+                            400: '#cd973a',
+                            500: '#be852e',
+                            600: '#a56926',
+                            700: '#864f22',
+                            800: '#6f4122',
+                            900: '#5f3721',
+                            950: '#361d10',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body text-gray-800 bg-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-heading font-bold text-primary-800">
+                        AgroCafé Consultores
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-primary-700 hover:text-secondary-600 transition">Inicio</a>
+                    <a href="#nosotros" class="text-primary-700 hover:text-secondary-600 transition">Quiénes Somos</a>
+                    <a href="#servicios" class="text-primary-700 hover:text-secondary-600 transition">Servicios</a>
+                    <a href="#beneficios" class="text-primary-700 hover:text-secondary-600 transition">Beneficios</a>
+                    <a href="#equipo" class="text-primary-700 hover:text-secondary-600 transition">Nuestro Equipo</a>
+                    <a href="#contacto" class="px-4 py-2 bg-secondary-600 text-white rounded-md hover:bg-secondary-700 transition">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button p-2 rounded-md text-primary-700 hover:text-secondary-600 hover:bg-gray-100 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-primary-700 hover:text-secondary-600 hover:bg-gray-100">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-primary-700 hover:text-secondary-600 hover:bg-gray-100">Quiénes Somos</a>
+                <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-primary-700 hover:text-secondary-600 hover:bg-gray-100">Servicios</a>
+                <a href="#beneficios" class="block px-3 py-2 rounded-md text-base font-medium text-primary-700 hover:text-secondary-600 hover:bg-gray-100">Beneficios</a>
+                <a href="#equipo" class="block px-3 py-2 rounded-md text-base font-medium text-primary-700 hover:text-secondary-600 hover:bg-gray-100">Nuestro Equipo</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-secondary-600 hover:bg-secondary-700">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center bg-cover bg-top relative" style="background-image: url('images/hero.webp');">
+        <div class="max-w-4xl mx-auto text-center px-4 z-10">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6">Innovación y Sostenibilidad en Cada Taza</h1>
+            <p class="text-xl md:text-2xl text-white mb-8">Consultoría especializada en sistemas de gestión para empresas agroindustriales de café en Caldas</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#servicios" class="px-8 py-3 bg-secondary-600 text-white font-medium rounded-md hover:bg-secondary-700 transition">Nuestros Servicios</a>
+                <a href="#contacto" class="px-8 py-3 bg-white text-primary-800 font-medium rounded-md hover:bg-gray-100 transition">Contactar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section id="nosotros" class="min-h-screen py-20 bg-primary-50 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-800 mb-6">Quiénes Somos</h2>
+                    <p class="text-lg text-gray-700 mb-6">En <span class="font-semibold text-primary-700">Consultorías SIG - Agro Café</span>, estamos comprometidos con el éxito y la mejora continua de su empresa.</p>
+                    <p class="text-lg text-gray-700 mb-6">Nos especializamos en la implementación y optimización de Sistemas Integrados de Gestión (SIG), ayudando a las empresas del sector agroindustrial, específicamente del sector cafetero a alinearse con los más altos estándares internacionales.</p>
+                    <p class="text-lg text-gray-700 mb-8">Implementamos soluciones prácticas y personalizadas que se adaptan a las necesidades particulares de su empresa, asegurando que sus iniciativas comerciales no solo sean viables económicamente, sino también responsables social y ambientalmente.</p>
+                    <div class="bg-primary-100 border-l-4 border-secondary-600 p-4">
+                        <p class="font-medium text-primary-800">"Contribuimos al desarrollo del sector agroindustrial en Caldas y nos alineamos con las políticas del Gobierno Nacional sobre innovación y desarrollo rural"</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="images/about.webp" alt="Café de Caldas" class="rounded-lg shadow-xl w-full">
+                    <div class="absolute -bottom-6 -right-6 bg-secondary-600 p-4 rounded-lg shadow-lg hidden md:block">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="min-h-screen py-20 bg-white flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-800 mb-4">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluciones integrales para la gestión y mejora de su empresa cafetera</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Asesoría -->
+                <div class="bg-primary-50 rounded-lg p-8 shadow-md hover:shadow-lg transition">
+                    <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary-800 mb-4 text-center">Asesoría</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Orientación técnica, metodológica y operativa para MIPYMES cafeteras</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Acompañamiento en optimización de procesos productivos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Guías, recomendaciones y herramientas para aplicar mejoras</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Consultoría -->
+                <div class="bg-primary-50 rounded-lg p-8 shadow-md hover:shadow-lg transition">
+                    <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary-800 mb-4 text-center">Consultoría</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Diagnósticos y soluciones estratégicas de alto impacto</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Evaluación de oportunidades de mejora en normas ISO</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Planes de acción para reducción de costos y aumento de productividad</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Formación -->
+                <div class="bg-primary-50 rounded-lg p-8 shadow-md hover:shadow-lg transition">
+                    <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary-800 mb-4 text-center">Formación</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Talleres y seminarios especializados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Capacitaciones en sistemas de gestión y normas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Mejores prácticas del sector y aseguramiento de calidad</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="min-h-screen py-20 bg-primary-800 text-white flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Beneficios para su Empresa</h2>
+                <p class="text-xl text-primary-200 max-w-3xl mx-auto">Ventajas competitivas que obtendrá al trabajar con nosotros</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-primary-700 rounded-lg p-8 hover:bg-primary-600 transition">
+                    <div class="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Incremento de Competitividad</h3>
+                    <p class="text-primary-100">Posicionamos su empresa cafetera como líder en el mercado con estándares internacionales.</p>
+                </div>
+                
+                <div class="bg-primary-700 rounded-lg p-8 hover:bg-primary-600 transition">
+                    <div class="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Certificaciones Internacionales</h3>
+                    <p class="text-primary-100">Preparamos su empresa para obtener certificaciones ISO que abren puertas a mercados globales.</p>
+                </div>
+                
+                <div class="bg-primary-700 rounded-lg p-8 hover:bg-primary-600 transition">
+                    <div class="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Optimización de Procesos</h3>
+                    <p class="text-primary-100">Reducción de costos operativos y aumento de eficiencia en sus procesos productivos.</p>
+                </div>
+                
+                <div class="bg-primary-700 rounded-lg p-8 hover:bg-primary-600 transition">
+                    <div class="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Adaptación Climática</h3>
+                    <p class="text-primary-100">Estrategias para enfrentar los desafíos del cambio climático en su producción cafetera.</p>
+                </div>
+                
+                <div class="bg-primary-700 rounded-lg p-8 hover:bg-primary-600 transition">
+                    <div class="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Sostenibilidad Integral</h3>
+                    <p class="text-primary-100">Implementamos prácticas responsables con el medio ambiente y la sociedad.</p>
+                </div>
+                
+                <div class="bg-primary-700 rounded-lg p-8 hover:bg-primary-600 transition">
+                    <div class="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Acceso a Mercados</h3>
+                    <p class="text-primary-100">Acceso a mercados especializados y de valor agregado para su café.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo -->
+    <section id="equipo" class="min-h-screen py-20 bg-white flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-800 mb-4">Nuestro Equipo</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Expertos en sistemas de gestión con amplia experiencia en el sector cafetero</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Claudia Marcela -->
+                <div class="bg-primary-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-64 bg-cover bg-top" style="background-image: url('images/claudia.webp');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary-800 mb-2">Claudia Marcela Jaramillo Henao</h3>
+                        <p class="text-secondary-600 font-medium mb-4">Ingeniera de Alimentos - Especialista en Gerencia SST</p>
+                        <p class="text-gray-700 mb-4">Experta en implementación de normativas de calidad, inocuidad alimentaria, seguridad y salud en el trabajo. Candidata a Magister en Sistemas Integrados de Gestión.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">ISO 9001</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">ISO 14001</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">ISO 45001</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fernando Arciniegas -->
+                <div class="bg-primary-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-64 bg-cover bg-top" style="background-image: url('images/fernando.jpg');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary-800 mb-2">Fernando Arciniegas Córdoba</h3>
+                        <p class="text-secondary-600 font-medium mb-4">Ingeniero Industrial - Especialista en SG-SST</p>
+                        <p class="text-gray-700 mb-4">14 años de experiencia en el SENA como líder de sistemas de gestión de calidad. Candidato a Magister en Sistemas Integrados de Gestión.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Gestión de Proyectos</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Sistemas de Gestión</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Formación</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Martha Elena -->
+                <div class="bg-primary-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-64 bg-cover bg-top" style="background-image: url('images/martha.jpg');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary-800 mb-2">Martha Elena Salazar Morales</h3>
+                        <p class="text-secondary-600 font-medium mb-4">Ingeniera Industrial - Especialista en Calidad</p>
+                        <p class="text-gray-700 mb-4">Amplia experiencia en implementación de sistemas de calidad y acompañamiento en auditorías de certificación. Candidata a Magister en SIG.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">ISO 9001</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">ISO 14001</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">ISO 45001</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Auditorías</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="min-h-screen py-20 bg-primary-50 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-800 mb-6">Contáctenos</h2>
+                    <p class="text-lg text-gray-700 mb-8">Estamos listos para ayudarle a implementar sistemas de gestión que impulsen su empresa cafetera hacia la excelencia y sostenibilidad.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-primary-800 mb-1">Teléfonos</h4>
+                                <p class="text-gray-700">317 773 4018 - 313 604 2199 - 316 286 0686</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-primary-800 mb-1">Correo Electrónico</h4>
+                                <p class="text-gray-700">contacto@consultoriasagrocafesas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-primary-800 mb-1">Dirección</h4>
+                                <p class="text-gray-700">Calle 23 # 21-41 oficina 1202, Edificio BCH - Manizales, Caldas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-primary-800 mb-1">Sitio Web</h4>
+                                <p class="text-gray-700">www.agrocafécaldas.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-heading font-bold text-primary-800 mb-6">Envíenos un Mensaje</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary-600 text-white py-3 px-4 rounded-md hover:bg-secondary-700 transition font-medium">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-950 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-4">AgroCafé Consultores</h3>
+                    <p class="text-primary-300">Innovación y Gestión Sostenible en el Sector Cafetero.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-primary-300 hover:text-white transition">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-primary-300 hover:text-white transition">Quiénes Somos</a></li>
+                        <li><a href="#servicios" class="text-primary-300 hover:text-white transition">Servicios</a></li>
+                        <li><a href="#beneficios" class="text-primary-300 hover:text-white transition">Beneficios</a></li>
+                        <li><a href="#equipo" class="text-primary-300 hover:text-white transition">Nuestro Equipo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-primary-300 hover:text-white transition">Asesoría</a></li>
+                        <li><a href="#" class="text-primary-300 hover:text-white transition">Consultoría</a></li>
+                        <li><a href="#" class="text-primary-300 hover:text-white transition">Formación</a></li>
+                        <li><a href="#" class="text-primary-300 hover:text-white transition">Certificaciones ISO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold mb-4">Contacto</h4>
+                    <p class="text-primary-300 mb-2">Manizales, Caldas, Colombia</p>
+                    <p class="text-primary-300 mb-2">contacto@consultoriasagrocafesas</p>
+                    <p class="text-primary-300">317 773 4018</p>
+                </div>
+            </div>
+            <div class="border-t border-primary-800 mt-12 pt-8 text-center text-primary-400">
+                <p>&copy; 2025 AgroCafé Consultores. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
